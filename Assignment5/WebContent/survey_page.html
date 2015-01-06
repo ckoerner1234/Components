@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<!--  Carolyn Koerner  SWE642    -->
+
+<html>
+<head>
+<title>CS Department Survey Page</title>
+
+
+<script src="jquery.js"></script>
+<script src="jquery-ui.js"></script>
+
+
+<link rel="stylesheet" title="default styles" href="jquery-ui.css"
+	media="screen" type="text/css">
+<link rel="stylesheet" title="default styles"
+	href="jquery.ui.tooltip.css" media="screen" type="text/css">
+<link rel="stylesheet" title="default styles" href="jquery.ui.tabs.css"
+	media="screen" type="text/css">
+<link rel="stylesheet" title="default styles" href="jquery-ui.min.css"
+	media="screen" type="text/css">
+<link rel="stylesheet" title="default styles" href="jquery.ui.theme.css"
+	media="screen" type="text/css">
+
+
+<link rel="stylesheet" title="default styles" href="general.css"
+	media="screen" type="text/css">
+<script src="surveypagejavascript.js"> </script>
+<script src="assignment3Script.js"> </script>
+
+</head>
+
+<body class="surveybgcolor" onload="registerHandler()" bgcolor="#00CCCC">
+	<h1 class="surveypageheader">Survey Form</h1>
+
+
+
+	<form id="myform" action="ProcessSurveyFormData" method="GET" id="surveyform"
+		autocomplete="on" class="basicinfo"  > 
+		
+		<table class="one">
+			<thead>
+				<th colspan="2"><strong> Name</strong></th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>First Name:</td>
+				</tr>
+				<tr>
+					<td><input id="firstName" type="text" size=50 name="firstname"
+						autofocus required></td>
+				</tr>
+				<tr>
+					<td>Last Name:</td>
+				</tr>
+				<tr>
+					<td><input id="lastName" type="text" size=50 name="lastname"
+						required></td>
+				</tr>
+				<tr>
+					<td>Student ID:</td>
+				</tr>
+				<tr>
+					<td><input id="studentid" type="text" size=50 name="studentid"
+						required></td>
+				</tr>
+		</table>
+
+
+		<table class="two">
+			<thead>
+				<th colspan="2"><strong> Address</strong></th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Street Address 1:</td>
+				</tr>
+				<tr>
+					<td><input id="address1" type="text" size=50
+						name="streetaddress1" required></td>
+				</tr>
+				<tr>
+					<td>Street Address 2:</td>
+				</tr>
+				<tr>
+					<td><input id="address2" type="text" value = "    "  name="streetaddress2"
+						size=50></td>
+				</tr>
+				<tr>
+					<td>City:</td>
+				<tr>
+					<td>
+						<!--  <span class="validator" id = "city"  size = 50>  </span>  -->
+						<input type="text" id="city" size=50 name="city">
+					</td>
+				</tr>
+				<tr>
+					<td>State:</td>
+				</tr>
+				<tr>
+					<td>
+						<!--  <span class="validator" id = "state"  size = 50> </span> -->
+						<input type="text" id="state" size=50 name="state">
+					</td>
+				</tr>
+				<tr>
+					<td>Zip Code:</td>
+				</tr>
+				<tr>
+					<td><input  id="zipcode"  type="text" size=50 name="zipcode" required></td>
+				</tr>
+		</table>
+
+
+		<table class="three">
+			<thead>
+				<th colspan="2"><strong> Contact Info</strong></th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Phone:</td>
+				</tr>
+				<tr>
+					<td><input id="phone" type="text" size=50
+						placeholder="(###) ###-####" name="phone" required></td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+				</tr>
+				<tr>
+					<td><input id="email" type="text" size=50 required
+						placeholder="name@domain.com" name="email"></td>
+				</tr>
+				<tr>
+					<td>URL:</td>
+				</tr>
+				<tr>
+					<td><input type="text" size=50
+						placeholder="http://www.domainname.com" name="url" required>
+					</td>
+				</tr>
+		</table>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br> <span id="validatezip" class="validator"> </span> <br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+				
+		<section class="additionaldata">
+		<p>
+
+			<label>Data</label> <input id="databox" name="databox" type="text"  size=50 >
+			<!--
+              <label>   Average</label>
+              <input id="average" type = "text" size = 10>
+              <label> Maximum</label>
+              <input id="maximum" type = "text" size = 10>-->
+
+		</p>
+
+		<p class="date">
+			<label>Date </label> <input type="date" name="date" size=50 required>
+		</p>
+		</section>
+	    <section class="additionaldata">
+		<p>
+			<strong>What did you like most about the campus?</strong> <br>
+			Students <input id="checkbox1" type="checkbox" value="students" checked> 
+			Location<input id="checkbox2" type="checkbox" value="location"> 
+			Campus<input id="checkbox3" type="checkbox" value="campus"> 
+			Atmosphere<input id="checkbox4" type="checkbox" value="atmosphere"> 
+			Dorm Roooms<input id="checkbox5" type="checkbox" value="drooms">
+			Sports<input name="checkbox5" type="checkbox" value="sports">
+		</p>
+
+		<p>
+			<strong>How did you become interested in the university?</strong> <br>
+			Friends<input name="interested" type="radio" value="friends" checked>
+			Television<input name="interested" type="radio" value="tv">
+			Internet<input name="interested" type="radio" value="internet">
+			Other<input name="interested" type="radio" value="other">
+		</p>
+	    </section>
+		<p>
+			<label> Comments: <br> <textarea name="comments"
+					rows="4" cols="50">
+                  Enter comments here. </textarea>
+			</label>
+		</p>
+		<p class="special">
+			High-school graduation month: <input type="text"
+				placeholder="Select a month" list="months" />
+			<datalist id="months">
+				<option value="January">
+				<option value="February">
+				<option value="March">
+				<option value="April">
+				<option value="May">
+				<option value="June">
+				<option value="July">
+				<option value="August">
+				<option value="September">
+				<option value="October">
+				<option value="November">
+				<option value="December">
+			</datalist>
+			Year: <input type="number" id="year" placeholder="2013"
+				title="This is a tooltip!">
+		</p>
+		<p>
+			How likely are you to recommend this school to other prospective
+			students? <select>
+				<option value="Very Likely">Very Likley</option>
+				<option value="Likely">Likley</option>
+				<option value="Unlikely">Unlikley</option>
+			</select>
+		</p>
+
+		<p>
+			<!--  <input type="submit" onclick="validateForm()" value="Submit">  -->
+			<input type="submit"  value="Submit"  onclick="validateForm()">
+			<input type="button" onclick="resetForm()" value="Clear">
+		</p>
+
+	</form>
+	<a href="http://www.gmu.edu/"> <span
+		title="Visit http://www.gmu.edu " class="tooltip"> <img
+			class="gmulogo" src="GMU_logo" width="100" height="100"
+			alt="George Mason Website">
+	</span>
+	</a>
+	
+
+
+<div id="oneandten" title="Warning Box" style="display: none;">  You may only enter numbers between one and ten. </div>
+<div id="atleastten" title="Warning Box" style="display: none;">  You must enter at least ten numbers. </div>
+<div id="notavalidemail" title="Warning Box" style="display: none;">  Not a valid email address.  </div>
+<div id="checkboxeswarning" title="Warning Box" style="display: none;">  You must check at least two checkboxes.  </div>
+<div id="addressisinvalid" title="Warning Box" style="display: none;">  The address is invalid.  Try again.  </div>
+
+
+
+</body>
+</html>
+

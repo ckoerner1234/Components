@@ -1,0 +1,198 @@
+/*  Carolyn Koerner  SWE645  */
+h1.cswebsiteheader {
+	font: x-large Verdana, sans-serif;
+	color: blue;
+	text-shadow: -4px 4px 6px #FF00FF;
+	font-size: 400%;
+	border-bottom: thin black solid;
+}
+
+h1.surveypageheader {
+	font: x-large Verdana, sans-serif;
+	color: blue;
+	text-shadow: -4px 4px 6px #FF00FF;
+	font-size: 400%;
+	border-bottom: thin black solid;
+}
+
+h2 {
+	font: x-large Verdana, sans-serif;
+	color: #FF33CC;
+	text-shadow: 2px 2px 4px #0000CF;
+	font-size: 200%;
+	border-bottom: thin black solid;
+}
+
+h3 {
+	font: Tahoma, Geneva, sans-serif;
+	color: #000099;
+	text-shadow: 2px 2px 4px #00FF00;
+	font-size: 150%;
+	border-bottom: thin black solid;
+}
+
+.foot{
+	font: Tahoma, Geneva, sans-serif;
+	color: #000099;
+	text-shadow: 2px 2px 4px #00FF00;
+	font-size: 150%;
+	border-bottom: thin black solid;
+	border-top: thin black solid;
+	  text-align: center;
+	
+}
+
+.head{
+	font: Tahoma, Geneva, sans-serif;
+	color: #000099;
+	text-shadow: 2px 2px 4px #00FF00;
+	font-size: 150%;
+	border-bottom: thin black solid;
+	border-top: thin black solid;
+	  text-align: center;
+	  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+	
+}
+
+div.csparagraph {
+	font-family: arial, sans-serif;
+	color: #EAFFFF;
+	background-color: 002EB8;
+	border: 3px solid;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+div.scriptstyle {
+	color: blue;
+}
+
+.special {
+	color: magenta
+}
+
+.survey {
+	font-size: 150%;
+	font: futura, optima;
+	color: #663399
+}
+
+.csbgcolor {
+	background-color: #B8F1FF
+}
+
+.surveybgcolor {
+	background-color: #BBE9C7
+}
+
+.date {
+	color: #3329EE
+}
+
+ul {
+	margin-left: 20px;
+	font: helvetica;
+	color: blue
+}
+
+.courses {
+	color: green
+}
+
+table,td {
+
+	}
+
+th {
+	background-color: #CC0099;
+	color: white;
+}
+
+tr.blue {
+	background-color: #0000FF;
+    color: white;
+}
+
+table.one {
+	float: left;
+}
+
+table.two {
+	float: left;
+}
+
+table.three {
+	float: left;
+}
+
+.tooltip {
+	border-bottom: 10px dotted #333;
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	cursor: pointer;
+}
+
+.tooltip:hover:after {
+	content: attr(title);
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	white-space: nowrap;
+	background: rgba(227, 54, 192, 0.85);
+	padding: 15px 35px;
+	color: #FFF;
+	border-radius: 10px;
+	margin-left: 0px;
+	margin-top: 0px;
+}
+
+img.gmulogo {
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+}
+
+.validator {
+	backgroung-color: white;
+}
+
+a:link {
+	color: green;
+}
+
+a:visited {
+	color: CC0099;
+}
+
+a:hover {
+	color: red;
+}
+
+a:active {
+	color: yellow;
+}
+tr.blue {
+	background-color: #0000FF;
+	color: white;
+}
+
+.links_on_first_page{
+	color:blue;
+    font-family:verdana;
+    font-size:130%;
+}
+
+.errorMessage {
+  font-weight: bold;
+  color: #FF0000;
+}
+
+.errorDiv{
+    background-color:#088A85;
+    border:1px solid black;
+    width:400px;
+    margin-bottom:8px;
+}

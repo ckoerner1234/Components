@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="baseLayout" template="/BaseLayout.jsp">
+        <put-attribute name="title" value="SWE645" />
+        <put-attribute name="header" value="/Header.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/Footer.jsp" />
+    </definition>
+    <definition name="/welcome.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Welcome" />
+        <put-attribute name="body" value="/index.jsp" />
+    </definition>
+     <definition name="/list_surveypage" extends="baseLayout">
+        <put-attribute name="title" value="List of Students" />
+        <put-attribute name="body" value="/list_surveypage.jsp" />
+    </definition>
+     <definition name="/delete_surveypage" extends="baseLayout">
+        <put-attribute name="title" value="List of Students" />
+        <put-attribute name="body" value="/list_surveypage.jsp" />
+    </definition>
+    
+    <definition name="/searchpage" extends="baseLayout">
+        <put-attribute name="title" value="Search Surveys" />
+        <put-attribute name="body" value="/searchpage.jsp" />
+    </definition>
+    <definition name="/homepage_4" extends="baseLayout">
+        <put-attribute name="title" value="Assignment 4" />
+        <put-attribute name="body" value="/ass4_surveypage.jsp" />
+    </definition>
+    <definition name="/homepage_5" extends="baseLayout">
+        <put-attribute name="title" value="Assignment 5" />
+        <put-attribute name="body" value="/ass5_homepage.jsp" />
+    </definition>
+    
+    
+    <definition name="/survey_form_page" extends="baseLayout">
+        <put-attribute name="title" value="Survey Form" />
+        <put-attribute name="body" value="/ass4_surveypage.jsp" />
+    </definition>
+     <definition name="/simple" extends="baseLayout">
+        <put-attribute name="title" value="Simple Acknowledgement" />
+        <put-attribute name="body" value="/SimpleAcknowledgement.jsp" />
+    </definition>
+     <definition name="/winner" extends="baseLayout">
+        <put-attribute name="title" value="Winner Acknowledgement" />
+        <put-attribute name="body" value="/WinnerAcknowledgement.jsp" />
+    </definition>    
+     <definition name="/ass4_surveypage" extends="baseLayout">
+        <put-attribute name="title" value="Student Form" />
+        <put-attribute name="body" value="/ass4_surveypage.jsp" />
+    </definition>  
+    
+</tiles-definitions>
+
+

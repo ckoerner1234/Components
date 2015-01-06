@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="false" />
+
+    <package name="default" namespace="/" extends="struts-default">
+    	<result-types>
+            <result-type name="tiles"
+                class="org.apache.struts2.views.tiles.TilesResult" />
+        </result-types>
+
+        <default-action-ref name="index" />
+
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+
+        <action name="index">
+            <result type="redirectAction">
+                <param name="actionName">HelloWorld</param>
+                <param name="namespace">/example</param>
+            </result>
+        </action>
+        
+        <action name="listAction" class="myPackage.ProcessSurveyFormDataAction" method="listStudents">
+        	<result name="success" type="tiles">/list_surveypage</result>
+			<result name="input">/NoStudent.jsp</result>
+        </action>
+
+        <action name="deleteAction" class="myPackage.ProcessSurveyFormDataAction" method="deleteStudents">
+        	<result name="success" type="tiles">/delete_surveypage</result>
+			<result name="input">/NoStudent.jsp</result>
+        </action>
+
+        <action name="searchAction">
+        	<result name="success" type="tiles">/searchpage</result>
+			<result name="input">/NoStudent.jsp</result>
+        </action>
+        
+        <action name="surveyForm">
+        	<result name="success" type="tiles">/survey_form_page</result>
+			<result name="input">/NoStudent.jsp</result>
+        </action>
+        
+        
+        <action name="ProcessSurveyFormData" class="myPackage.ProcessSurveyFormDataAction" method="execute">
+			<result name="simpleAcknowledgement" type="tiles">/simple</result>
+			<result name="winnerAcknowledgement" type="tiles">/winner</result>
+			<result name="studentInfo">/Student_struts.jsp</result>
+			<result name="noStudent">/NoStudent.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="input" type="tiles">/survey_form_page</result>
+		</action>
+	
+        <action name="SearchSurveys" class="myPackage.SearchSurveysAction" method="execute">
+			<result name="success" type="tiles">/list_surveypage</result>
+			<result name="error">/error.jsp</result>
+			<result name="input" type="tiles">/searchpage</result>
+		</action>
+		
+		<action name="ass4_homepage">
+			<result name="success" type="tiles">/homepage_4</result>
+			<result name="input">/index.jsp</result>
+		</action>
+		<action name="ass5_homepage">
+			<result name="success" type="tiles">/homepage_5</result>
+			<result name="input">/index.jsp</result>
+		</action>
+		
+        
+    </package>
+
+    <include file="example.xml"/>
+
+    <!-- Add packages here -->
+
+</struts>
